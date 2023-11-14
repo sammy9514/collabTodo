@@ -1,7 +1,8 @@
 import { Application, Response, Request } from "express";
+import todo from "./router/todoRouter";
 
 export const mainApp = (app: Application) => {
-  // app.use("/api/v1", todo);
+  app.use("/api/v1", todo);
 
   app.get("/", (req: Request, res: Response) => {
     try {
